@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descendant Traversing In jQuery</title>
+</head>
+
+<body>
+    body
+
+    <div class="great-grand-parent">
+        great-grand-parent
+        <div class="grand-parent">
+            grand-parent
+            <div class="parent">
+                parent
+                <div class="child">Child One</div>
+                <div class="child">Child Two</div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Script In Which we are including jquery CSS  -->
+
+    <script>
+        $("*").css({
+            backgroundColor: "pink",
+            textAlign: "center",
+            margin: "15px",
+            fontSize: "30px",
+        });
+    </script>
+
+    <!-- script -->
+
+    <script>
+        $(document).ready(function () {
+
+
+            // parent 
+
+            $('.child').children().css({ border: '5px solid red' })
+            $('.parent').children().css({ border: '5px solid blue' })
+            $('.grand-parent').children().css({ border: '5px solid orange' })
+            $('.great-grand-parent').children().css({ border: '5px solid green' })
+            $('body').children().css({ border: '5px solid black' })
+            $('html').children().css({ border: '5px solid crimson' })
+
+
+
+            // find 
+
+            $('html').find('.parent').css({ border: '2px solid blue' })
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

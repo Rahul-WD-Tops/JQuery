@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> jQuery assignment </title>
+</head>
+
+<body>
+
+
+    <body class="span">great-great-grandparent
+        <div style="width:450px;">great-grandparent
+            <ul>grandparent
+                <ul>direct parent
+                    <span>
+                        <p class="span1">span</p>
+                    </span>
+                </ul>
+            </ul>
+        </div>
+    </body>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $("*").css({
+            margin: "30px",
+            fontSize: "15px",
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('span').parents().css({ border: '2px solid red' })
+            $('span1').parents().css({ border: '3px solid gray ' })
+
+
+        });
+    </script>
+</body>
+
+</html>

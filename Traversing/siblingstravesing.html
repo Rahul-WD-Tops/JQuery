@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sibling Traversing In jQuery</title>
+</head>
+
+<body>
+
+    <div class="parent">
+        <!-- parent -->
+        <div class="child01">Child One</div>
+        <div class="child02">Child Two</div>
+        <div class="child03">Child Three</div>
+    </div>
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <!-- Script In Which we are including jquery CSS  -->
+
+    <script>
+        $("*").css({
+            // backgroundColor: "pink",
+            textAlign: "center",
+            margin: "25px",
+            fontSize: "30px",
+        });
+    </script>
+
+    <!-- script -->
+
+    <script>
+        $(document).ready(function () {
+
+            $(".child01 ").siblings().css({ border: "5px solid orange" });
+            $(".child03 ").siblings().css({ border: "5px solid white" });
+            $(".child02 ").siblings().css({ border: "5px solid green" });
+
+        });
+    </script>
+</body>
+
+</html>
